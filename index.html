@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>MATH LAB | Ньютон–Лейбниц формуласы</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]]
+      },
+      svg: {fontCache: "global"}
+    };
+  </script>
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+<div class="app">
+  <header class="header">
+    <div class="brand">
+      <div class="logo">∫</div>
+      <div>
+        <strong>MATH LAB</strong>
+        <small>§3. Анықталған интеграл. Ньютон–Лейбниц формуласы</small>
+      </div>
+    </div>
+
+    <div class="head-right">
+      <span class="chip">1 КУРС</span>
+      <span class="chip">80 МИНУТ</span>
+      <span class="chip">⭐ <b id="taskScore">0</b> ұпай</span>
+      <button id="fullscreenBtn" title="Толық экран">⛶</button>
+    </div>
+  </header>
+
+  <div class="page-track">
+    <div id="pageFill"></div>
+  </div>
+
+  <main id="content"></main>
+
+  <footer class="footer">
+    <div class="info-row">
+      <div class="info">
+        <span>🕒 Алматы уақыты</span>
+        <strong id="liveClock">--:--:--</strong>
+      </div>
+      <div class="info">
+        <span>⏳ Қалған уақыт</span>
+        <strong id="remaining">80:00</strong>
+      </div>
+      <div class="info">
+        <span>⏱ Өткен уақыт</span>
+        <strong id="elapsed">00:00</strong>
+      </div>
+      <div class="timer-buttons">
+        <button id="timerStart">▶ Бастау</button>
+        <button id="timerPause">⏸ Үзіліс</button>
+        <button id="timerReset">↻</button>
+      </div>
+    </div>
+
+    <div class="time-track">
+      <div id="timeFill"></div>
+    </div>
+
+    <div class="bottom-nav">
+      <div class="foot-left">
+        <strong>BY DARKHAN</strong>
+        <span id="pageCounter">1 / 1</span>
+        <span id="pageTitle">Кіріспе</span>
+        <span id="timerStatus">Сабақ басталған жоқ</span>
+      </div>
+
+      <div class="nav-actions">
+        <button id="backBtn">← Артқа</button>
+        <button id="nextBtn" class="primary">Келесі →</button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Батырмалар сол жақта -->
+<div class="floating-controls">
+  <button id="basicLaunch">🧮 Қарапайым</button>
+  <button id="scienceLaunch">∑ Ғылыми</button>
+  <button id="jumpSelf">✏️ Өзіндік жұмыс</button>
+  <button id="jumpNotes">📝 Конспект</button>
+  <button id="jumpGame">🏆 Ойын</button>
+</div>
+
+<!-- Калькулятор 1 -->
+<section class="calculator" id="calc-basic">
+  <div class="calc-header">
+    <strong>🧮 Қарапайым</strong>
+    <button data-close="basic">✕</button>
+  </div>
+  <div class="calc-display" id="display-basic">0</div>
+  <div class="calc-keys" id="keys-basic"></div>
+  <small>Кез келген жерінен ұстап жылжыт</small>
+</section>
+
+<!-- Калькулятор 2 -->
+<section class="calculator" id="calc-science">
+  <div class="calc-header">
+    <strong>∑ Ғылыми • DEG</strong>
+    <button data-close="science">✕</button>
+  </div>
+  <div class="calc-display" id="display-science">0</div>
+  <div class="calc-keys" id="keys-science"></div>
+  <small>Бұрыштар градуспен есептеледі</small>
+</section>
+</body>
+</html>
